@@ -7,7 +7,10 @@
                 {{item}}
             </li>
         </ul> -->
-        <button *ngFor="let item of tagHistory" class="list-group-item list-group-item-action mt-1">
+        <button 
+            *ngFor="let item of tagHistory" 
+            class="list-group-item list-group-item-action mt-1"
+            (click)="searchTag(item)">
             {{item | titlecase}}
         </button>
     </div>

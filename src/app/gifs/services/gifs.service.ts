@@ -6,8 +6,7 @@ import { Gif, SerchResponse } from '../interfaces/gifs.interfaces';
   providedIn: 'root',
 })
 export class GifsService {
-
-  public gifsList: Gif [] = []
+  public gifsList: Gif[] = [];
 
   private _tagsHistory: string[] = [];
   private apiKey: string = '4y3VRVDJ3Sj4JRZLVbnImQgz7jMk510n';
@@ -39,10 +38,11 @@ export class GifsService {
       .set('limit', '10')
       .set('q', tag);
 
-    this.http.get<SerchResponse>(`${this.serviceUrl}/search`, { params })
+    this.http
+      .get<SerchResponse>(`${this.serviceUrl}/search`, { params })
       .subscribe((resp) => {
-      this.gifsList = resp.data
-      console.log(this.gifsList)
-    });
+        this.gifsList = resp.data;
+        console.log(this.gifsList);
+      });
   }
 }
