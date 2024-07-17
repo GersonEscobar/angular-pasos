@@ -1,0 +1,10 @@
+#sidebar{
+    width: 250px;
+    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex; /* hace que vaya ajustandoce a medida que va creciendo la ventana*/
+    flex-direction: column;
+}
