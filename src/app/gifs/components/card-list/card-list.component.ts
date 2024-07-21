@@ -8,6 +8,6 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 })
 export class CardListComponent {
 
-  @Input()
-  public gifs:Gif[]= [];
+@Input()
+public gifs: Gif []= [];
 }
